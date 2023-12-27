@@ -1,0 +1,80 @@
+$bgScroll: #F8F8F8;
+$srollHeader: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+
+.scroll {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $bgScroll;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    width: 240px;
+}
+
+.swiper-pagination {
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+    text-align: center;
+}
+
+.swiper-pagination--positioned {
+    position: static;
+    display: block;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 4px;
+    border-radius: 100%;
+    background-color: #B5B6BC;
+    opacity: 0.5
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.scroll__header {
+    width: 100%;
+    background: $srollHeader;
+    margin: 0;
+    padding: 16px;
+    color: #7E7E82;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .sweiper-padination {
+        display: none;
+        height: 0;
+    }
+    .swiper-pagination--positioned {
+        display: none;
+        position: none;
+    }
+    .swiper-pagination-bullet {
+        display: none;
+        position: none;
+        height: 0;
+        width: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .swiper-pagination--positioned {
+        display: none;
+        position: none;
+    }
+}

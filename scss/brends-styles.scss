@@ -1,0 +1,156 @@
+
+$bgGradient:linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+$textColor: #7E7E82;
+$brendsItemBorder: #EAEAEA;
+$bgItems: #FFF;
+$textItemColor: #1B1C21;
+$buttonsBg: rgba(0,0,0,0);
+.brends {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+
+.brends__title {
+    background: $bgGradient;
+    padding: 16px;
+    color: $textColor;
+    font-family: 'TTlakes-Medium';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.brends__scroll {
+    overflow: scroll;
+    margin: 16px;
+}
+
+.brends__wrapper {
+    display: flex;
+    margin-bottom: 16px;
+    height: 160px;
+
+}
+
+.brends__button {
+    display: none
+}
+
+.brends__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 6px;
+    border: $brendsItemBorder;
+    background: $bgItems;
+
+} 
+.brends__item--size {
+    min-width: 224px;
+    height: 160px;
+    padding: 16px;
+}
+
+.brends__text {
+    height: 100%;
+    color: $textItemColor;
+    font-family: 'TTlakes-Medium';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    text-decoration: none;}
+
+.brends__more {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.brends__wrapper {
+    transition: all 0.8s;
+}
+
+
+@media screen and (min-width: 768px) {
+    .brends__wrapper {
+        column-gap: 24px;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+
+    .brends__scroll {
+        overflow: hidden;
+        margin: 24px;
+    }
+
+    .brends__title {
+        padding-left: 24px;
+    }
+
+    .brends__item--size {
+        width: 224px;
+    }
+
+    .brends__button {
+        background-color: $buttonsBg;
+        border-color: $buttonsBg;
+        margin-top: 24px;
+        margin-left: 24px;
+        color: $textItemColor;
+        font-family: 'TTLakes-Medium';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .brends__button::before {
+        content: url('../img/expand.svg');
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 9px;
+        transition: all 0.5s;
+    }
+
+    .brends__button--clicked {
+        margin-top: 46px;
+    }
+
+    .brends__button--clicked::before {
+        transform: rotate(180deg)
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .brends__wrapper {
+        column-gap: 32px;
+
+    }
+    .brends__scroll {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .brends__title {
+        padding-left: 32px;
+    }
+}

@@ -1,0 +1,136 @@
+$bgGradient:  linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+$borderColor: #EAEAEA;
+$backgroundColor: #FFF;
+$textColor: #1B1C21;
+$buttonColor: rgba(0,0,0,0);
+$headerTextColor: #7E7E82;
+
+.tech-views {
+    width: 100%;
+    margin-bottom: 24px;
+}
+.tech-views__header {
+    color: $headerTextColor;
+    font-family: 'TTlakes-Medium';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    padding: 16px;
+    background: $bgGradient;
+    margin: 0;
+}
+.tech-views__scroll {
+    overflow: scroll;
+    margin: 16px;
+}
+
+.tech-views__wrapper {
+    display: flex;
+    margin-bottom: 16px;
+
+}
+
+.tech-views__item {
+    min-width: 224px;
+    height: 72px;
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid $borderColor;
+    background: $backgroundColor;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.tech-views__content {
+    object-fit: none;
+    height: auto;
+}
+
+.tech-views__ico {
+    width: 40px;
+    height: 40px;
+}
+
+.tech-views__button {
+    display: none;
+}
+
+.tech-views__wrapper {
+    transition: all 0.8s;
+}
+
+@media screen and (min-width: 768px) {
+
+    .tech-views__scroll {
+        overflow: hidden;
+        margin: 24px;
+    }
+    .tech-views__wrapper {
+        column-gap: 24px;
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        height: 160px;
+        row-gap: 16px;
+    }
+
+    .tech-views__header {
+        padding-left: 24px;
+    }
+
+    .tech-views__item {
+        width: 224px;
+    }
+
+    .tech-views__button {
+        background-color: $buttonColor;
+        border-color: $buttonColor;
+        margin-top: 24px;
+        margin-left: 24px;
+        color: $textColor;
+        font-family: 'TTLakes-Medium';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.2px;
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .tech-views__button::before {
+        content: url('../img/expand.svg');
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin-right: 9px;
+        transition: all 0.5s;
+    }
+
+    .tech-views__button--clicked {
+        margin-top: 46px;
+    }
+
+    .tech-views__button--clicked::before {
+        transform: rotate(180deg)
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .tech-views__wrapper {
+        column-gap: 32px;
+    }
+
+    .tech-views__header {
+        padding-left: 32px;
+    }
+
+    .tech-views__scroll {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}

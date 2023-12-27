@@ -1,0 +1,67 @@
+$bgColor: #FFF;
+$borderColor: #B8FFEC;
+$servicesText: #7E7E82;
+
+.services__list {
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    background-color: inherit;
+}
+
+.services__list--positioned {
+    margin-bottom: 24px;
+    margin-left: 16px;
+}
+
+.services__item {
+    white-space: nowrap;   
+}
+
+.services__btn {
+    background-color: inherit;
+    height: 40px;
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 6px;
+    border: 2px solid rgba(0,0,0,0);
+    outline: 0;
+}
+
+.services__text {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $servicesText;
+    margin: 8px 20px;
+
+}
+
+.services__btn:active, .services__btn:focus, .services__btn:hover {
+    background-color: white;
+    border: 2px solid $borderColor;
+}
+
+.services__btn[autofocus]:focus {
+    border: 2px solid inherit;
+}
+
+@media screen and (min-width: 768px) {
+    .services__list {
+        margin: 32px 0;
+        margin-left: 24px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+
+    .services__list {
+        flex-wrap: wrap;
+        margin-top: 8px;
+        margin-left: 32px;
+        margin-bottom: 20px;
+    }
+}

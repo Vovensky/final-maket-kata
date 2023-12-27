@@ -1,0 +1,77 @@
+
+
+@import '../fonts.css';
+@import '~normalize.css';
+@import './swiper-services-info.scss';
+@import './swiper__styles.scss';
+@import './main-page-footer.scss';
+@import './brends-styles.scss';
+@import './tech__views.scss';
+@import './user-panel.scss';
+@import './users-button.scss';
+@import './services.scss';
+@import './main-section.scss';
+@import './aside-panel.scss';
+@import './users-button.scss';
+@import './wrapper.scss';
+@import './title.scss';
+@import './popup.scss';
+
+
+
+
+$bgColor: #f8f8f8;
+$text: #fff;
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+* {
+  margin:0;
+  padding: 0;
+  font-family: TTLakes-Medium;
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bgColor;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blur {
+  position: fixed;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  background: $bgColor;
+  opacity: 0.9;
+  z-index: 9;
+}
+
+main {
+  position: relative;
+}

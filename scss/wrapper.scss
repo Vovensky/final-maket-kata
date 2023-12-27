@@ -1,0 +1,16 @@
+.main-section-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.page{
+    display: block;
+    background-color: #f8f8f8;
+    display:flex;
+}
+
+@media screen and (min-width: 1440px) {
+    .main-section-wrapper {
+        width: 1120px
+    }
+}

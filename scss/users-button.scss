@@ -1,0 +1,126 @@
+
+$buttonBg: rgba(0,0,0,0);
+.users-button {
+    border: none;
+    border-radius: 100%;
+    background-color: $buttonBg;
+
+}
+
+.users-button--animation {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.burger {
+    display: block
+}
+
+.call {
+    display: none;
+}
+
+.chat{
+    display: none;
+}
+
+.check-Status {
+    display: block;
+}
+
+.repair {
+    margin-left: auto;
+}
+
+.profile {
+    display: none;
+    order: 7
+}
+
+.chat--pos_aside-panel,
+.call--pos_aside-panel,
+.profile--pos_aside-panel {
+    margin: 0;
+    display: block;
+}
+
+.users-button--animation:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+
+}
+
+.users-button--animation_active {
+    transform: scale(1.2);
+    opacity: 0.8
+}
+
+.users-button--clicked {
+    transform: scale(1.1);
+    opacity: 0.8
+}
+
+@media  screen and (min-width: 768px) {
+
+    .profile {
+        display: block;
+        order: 4
+    }
+    .call {
+        display: block;
+        margin-left: auto;
+    }
+    
+    .chat{
+        display: block;
+        order: 3
+    }
+
+    .chat--pos_aside-panel,
+    .call--pos_aside-panel {
+    margin: 0;
+    }
+    .repair {
+        order: 5;
+        margin-left: 4px;
+    }
+
+    .repair {
+        order: 5;
+        display: flex;
+        align-items: center;
+        margin-left: 4px;
+    }
+
+    .repair::before {
+        content:'';
+        display: block;
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+        margin-right: 20px;
+
+    }
+
+    .profile {
+        order: 4;
+    }
+    .call {
+        order: 1
+    }
+    .chat {
+        order: 3
+    }
+
+    .check-Status {
+        order: 6;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .users-button__text{
+        margin-right: 8px;
+        font-weight: 500;
+    }
+}

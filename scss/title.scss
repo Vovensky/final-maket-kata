@@ -1,0 +1,55 @@
+
+
+$titleText: #1B1C21;
+
+
+.title {
+    width: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.title-text{
+    font-family: 'TTlakes-Bold';
+    color: $titleText;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    display: flex;
+}
+
+.title-text--positioned {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.title::before {
+    display: block;
+    content: url('../img/highlight.svg');
+    margin-right: 16px;
+    height: 40px;
+}
+
+.repair-title, .checkStatus-title {
+    display: none
+}
+
+@media screen and (min-width: 1440px) {
+    .repair-title, .checkStatus-title {
+        display: flex;
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+
+    .repair-title {
+        margin-right: 32px;
+    }
+
+    .title-text--positioned {
+        margin-right: auto;
+    }
+}
