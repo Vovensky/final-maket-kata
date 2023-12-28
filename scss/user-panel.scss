@@ -65,6 +65,15 @@ $bgColor: #FFF;
         width: 50%;
         display: none;
     }
+
+    .img-animation {
+        transition: all 0.8s;
+    }
+
+    .img-animation:hover {
+        transform: scale(1.2);
+        opacity: 0.8
+    }
 }
 
 
