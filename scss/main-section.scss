@@ -93,17 +93,28 @@ $buttonBg: #F8F8F8;
 }
 
 .main-section__button-image {
-    margin-left: 8px;
+    margin-left: 0px;
+}
+
+.repair-title::before {
+    content: attr(data-text);
+    margin-right: 8px;
+}
+
+.checkStatus-title::before {
+    content: attr(data-text);
+    margin-right: 8px;
 }
 
 .main-section__button-image--animation {
     transition: all 0.8s;
 }
 
-.main-section__image--animation:hover {
+.main-section__button-image--animation:hover {
     transform: scale(1.2);
     opacity: 0.8
 }
+
 
 @media screen and (min-width: 768px) {
     .main-section {
