@@ -92,6 +92,19 @@ $buttonBg: #F8F8F8;
     object-fit: contain;
 }
 
+.main-section__button-image {
+    margin-left: 8px;
+}
+
+.main-section__button-image--animation {
+    transition: all 0.8s;
+}
+
+.main-section__image--animation:hover {
+    transform: scale(1.2);
+    opacity: 0.8
+}
+
 @media screen and (min-width: 768px) {
     .main-section {
         display: flex;
